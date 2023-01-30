@@ -3,4 +3,4 @@ virtualmachines:
     vm01:
       ansible_host: 10.100.122.11
     vm02:
-      ansible_host: 10.100.122.15
+      ansible_host: 10.100.122.115
