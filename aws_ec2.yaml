@@ -1,0 +1,6 @@
+plugin: amazon.aws.aws_ec2
+aws_access_key: AKIATGQJEEGC6STWYRP3
+aws_secret_key: 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
+
+regions:
+- ap-southeast-1
