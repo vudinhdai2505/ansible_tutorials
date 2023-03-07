@@ -1,9 +1,9 @@
 - name: update and install prometheus
-  apt:
+  yum:
     name: prometheus
     state: latest
     update_cache: yes
-    cache_valid_time: 3600
+#    cache_valid_time: 3600
 - name: prometheus args
   template:
     src: prometheus.j2
