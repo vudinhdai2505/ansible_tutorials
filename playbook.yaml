@@ -1,14 +1,14 @@
 - name: install prometheus
   hosts: tag_Name_ec2_lab2_03032023
   remote_user: ec2-user
-  tasks:
-   - name: Ping my hosts
-     ansible.builtin.ping:
-   - name: Print message
-     ansible.builtin.debug:
-       msg: Hello world
-#  roles:
-#    - node-exporter
+#  tasks:
+#   - name: Ping my hosts
+#     ansible.builtin.ping:
+#   - name: Print message
+#     ansible.builtin.debug:
+#       msg: Hello world
+  roles:
+    - prometheus
 
 - name: install node exporter
   hosts: tag_Env_lab_ansible
@@ -20,7 +20,7 @@
 #     ansible.builtin.debug:
 #       msg: Hello world
   roles:
-    - roles/node-exporter
+    - node-exporter
 
 #- hosts: tag_Env_lab_ansible
 #  tasks:
