@@ -19,8 +19,8 @@
    - name: Print message
      ansible.builtin.debug:
        msg: Hello world
-#  roles:
-#    - node-exporter
+  roles:
+    - node-exporter
 
 - hosts: tag_Env_lab_ansible
   tasks:
