@@ -1,5 +1,6 @@
 - name: install prometheus
-  hosts: tag_Name_ec2_lab2_03032023
+#  hosts: tag_Name_ec2_lab2_03032023
+  hosts: prometheus
   remote_user: ec2-user
 #  tasks:
 #   - name: Ping my hosts
@@ -11,7 +12,8 @@
     - prometheus
 
 - name: install node exporter
-  hosts: tag_Env_lab_ansible
+#  hosts: tag_Env_lab_ansible
+  hosts: node-exporter
   remote_user: ec2-user
 #  tasks:
 #   - name: Ping my hosts
