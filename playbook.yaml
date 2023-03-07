@@ -1,12 +1,12 @@
-- name: install prometheus
-  hosts: tag_Name_ec2_lab2_03032023
-  remote_user: ec2-user
-  tasks:
-   - name: Ping my hosts
-     ansible.builtin.ping:
-   - name: Print message
-     ansible.builtin.debug:
-       msg: Hello world
+#- name: install prometheus
+#  hosts: tag_Name_ec2_lab2_03032023
+#  remote_user: ec2-user
+#  tasks:
+#   - name: Ping my hosts
+#     ansible.builtin.ping:
+#   - name: Print message
+#     ansible.builtin.debug:
+#       msg: Hello world
 #  roles:
 #    - prometheus
 #
@@ -27,13 +27,15 @@
 ##    - debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
 
 #---
-#- name: update and install prometheus
-#  hosts: tag_Name_ec2_lab2_03032023
-#  yum:
-#    name: prometheus
-#    state: latest
-#    update_cache: yes
-#    cache_valid_time: 3600
+- name: update and install prometheus
+  hosts: tag_Name_ec2_lab2_03032023
+  tasks:
+    - name: test
+      yum:
+        name: prometheus
+        state: latest
+        update_cache: yes
+        cache_valid_time: 3600
 #- name: prometheus args
 #  template:
 #    src: prometheus.j2
