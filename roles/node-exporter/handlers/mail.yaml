@@ -1,15 +1,7 @@
 ---
-#- name: restart node_exporter
-#  become: true
-#  systemd:
-#    daemon_reload: true
-#    name: node_exporter
-#    state: restarted
-- name: reload_daemon_and_restart_node_exporter
-  systemd:
+- name: restart node_exporter
+  service:
     name: node_exporter
     state: restarted
-    daemon_reload: yes
-    enabled: yes
 
 
