@@ -26,8 +26,9 @@
 ##  tasks:
 ##    - debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
 
-
+---
 - name: update and install prometheus
+  hosts: tag_Name_ec2_lab2_03032023
   yum:
     name: prometheus
     state: latest
