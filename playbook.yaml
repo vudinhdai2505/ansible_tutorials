@@ -11,7 +11,7 @@
 #    - node-exporter
 
 - name: install node exporter
-  hosts: tag_lab_ansible
+  hosts: tag_Env_lab_ansible
   remote_user: ec2-user
   tasks:
    - name: Ping my hosts
