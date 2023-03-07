@@ -1,0 +1,9 @@
+all:
+  children:
+    prometheus:
+      hosts:
+        10.50.14.122:
+    node-exporter:
+      hosts:
+        10.50.14.122:
+        10.50.12.156:
