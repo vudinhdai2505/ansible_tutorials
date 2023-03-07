@@ -1,14 +1,21 @@
 ---
 plugin: amazon.aws.aws_ec2
-aws_access_key: AKIATGQJEEGC6STWYRP3
-aws_secret_key: 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
 
 regions:
 - ap-southeast-1
+
+filters:
+  # All instances with their `Environment` tag set to `dev`
+  tag:Env: lab-ansible
 keyed_groups:
-  - key: tags
+  - key: tags.Env
     prefix: tag
-  - prefix: instance_type
-    key: instance_type
-  - key: placement.region
-    prefix: aws_region
+      #  - prefix: instance_type
+      #key: instance_type
+      #- key: placement.region
+      #prefix: aws_region
+compose:
+  #ansible_user: "'ec2-user'"
+  ansible_host: private_ip_address
+    #hostvars_prefix: 'ec2_'
+  #hostvars_suffix: '_03032023'
