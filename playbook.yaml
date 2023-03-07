@@ -21,3 +21,7 @@
        msg: Hello world
 #  roles:
 #    - node-exporter
+
+- hosts: tag_Env_lab_ansible
+  tasks:
+    - debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
