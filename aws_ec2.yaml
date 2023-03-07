@@ -8,7 +8,7 @@ filters:
   # All instances with their `Environment` tag set to `dev`
   tag:Env: lab-ansible
 keyed_groups:
-  - key: tags.Env
+  - key: tags
     prefix: tag
       #  - prefix: instance_type
       #key: instance_type
