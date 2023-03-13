@@ -1,11 +1,13 @@
 - name: update and install prometheus
   hosts: tag_Name_ec2_lab1_03032023
-  tasks:
-    - name: test
-      yum:
-        update_cache: yes
-    - name: Install prometheus
-      unarchive:
-        src: "https://github.com/prometheus/prometheus/releases/download/v2.42.0/prometheus-2.42.0.linux-amd64.tar.gz"
-        dest: /tmp/
-        remote_src: yes
+#  tasks:
+#    - name: test
+#      yum:
+#        update_cache: yes
+#    - name: Install prometheus
+#      unarchive:
+#        src: "https://github.com/prometheus/prometheus/releases/download/v2.42.0/prometheus-2.42.0.linux-amd64.tar.gz"
+#        dest: /tmp/
+#        remote_src: yes
+  roles:
+    - prometheus
