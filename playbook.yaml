@@ -9,5 +9,7 @@
 #        src: "https://github.com/prometheus/prometheus/releases/download/v2.42.0/prometheus-2.42.0.linux-amd64.tar.gz"
 #        dest: /tmp/
 #        remote_src: yes
-  roles:
-    - prometheus
+  tasks:
+    - include_role:
+        name: prometheus
+        tasks_from: main.yml
