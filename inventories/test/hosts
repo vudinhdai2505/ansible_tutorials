@@ -1,0 +1,7 @@
+[prometheus]
+10.50.12.156 ip="10.50.12.156" ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[node-exporter]
+10.50.12.156 ip="10.50.12.156" ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+
