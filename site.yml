@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  become_method: sudo
+  serial: 10
+  roles:
+    - {role: prometheus, tags: prometheus}
+    - {role: node-exporter, tags: node-exporter}
